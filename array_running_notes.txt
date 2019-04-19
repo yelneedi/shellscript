@@ -1,0 +1,16 @@
+
+[cloud_user@yelneedi1c shell_scipt]$ MYARRAY=("one" "two" "three")
+[cloud_user@yelneedi1c shell_scipt]$ echo $MYARRAY
+one
+[cloud_user@yelneedi1c shell_scipt]$ echo ${MYARRAY[0]}
+one
+[cloud_user@yelneedi1c shell_scipt]$ echo ${MYARRAY[1]}
+two
+[cloud_user@yelneedi1c shell_scipt]$ echo ${MYARRAY[2]}
+three
+echo ${MYARRAY[*]}
+adding index to arry:-
+[cloud_user@yelneedi1c shell_scipt]$ MYARRAY[3]="fourth"
+[cloud_user@yelneedi1c shell_scipt]$ echo ${MYARRAY[*]}
+one two three fourth
+
