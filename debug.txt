@@ -1,0 +1,12 @@
+#note running script in bebug mode
+
+example:
+bash -x <script name>
+
+# how to put speific part in shell
+
+start the debug
+set -x
+
+ending the debug
+set +x
