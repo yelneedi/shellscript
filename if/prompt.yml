@@ -9,6 +9,9 @@
        prompt: which pacakge need to install
        default: telnet
        private: no
+       register: results
    tasks:
      - name: install indicated pkg
        yum: name={{ pkgname }} state=latest
+     - name: debug out put
+       debug: name=results
