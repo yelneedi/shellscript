@@ -3,15 +3,10 @@
    sudo: yes
    gather_facts: no
    vars:
-     playbook_version: o.01b
-   vars_prompt:
-     - name: pkgname
-       prompt: which pacakge need to install
-       default: telnet
-       private: no
-       register: results
+     pkgname: httpd
    tasks:
-     - name: install indicated pkg
+     - name: install indicated {{ pkgname }}
        yum: name={{ pkgname }} state=latest
+       register: results
      - name: debug out put
-       debug: name=results
+       debug: var=results
