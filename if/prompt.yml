@@ -1,0 +1,14 @@
+--- # prompt for user package
+ - hosts: localhost
+   sudo: yes
+   gather_facts: no
+   vars:
+     playbook_version: o.01b
+   vars_prompt:
+     - name: pkgname
+       prompt: which pacakge need to install
+       default: telnet
+       private: no
+   tasks:
+     - name: install indicated pkg
+       yum: name={{ pkgname }} state=latest
