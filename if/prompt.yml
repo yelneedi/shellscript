@@ -4,9 +4,10 @@
    gather_facts: no
    vars:
      pkgname: httpd
+     pkg_state: latest
    tasks:
      - name: install indicated {{ pkgname }}
-       yum: name={{ pkgname }} state=latest
+       yum: name={{ pkgname }} state={{ pkg_state }}
        register: results
      - name: debug out put
        debug: var=results
